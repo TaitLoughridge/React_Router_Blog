@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 // importing my components
 import Home from './components/Home';
@@ -12,6 +12,11 @@ function App() {
   return (
     <div className="App">
       <Router>
+          <nav>
+            <Link to='/'>Home</Link>
+            <Link to='/blog'>Blog</Link>
+            <Link to='/about'>About</Link>
+          </nav>
         <Switch>
           <Route exact path='/'>
             <Home />
