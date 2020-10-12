@@ -1,8 +1,9 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const Post = props => {
-    // only this example(one line below)
-    const post = props.post[id];  
+    const { id } = useParams();
+    const post = props.posts[id];  
 
     return (
         <article>
